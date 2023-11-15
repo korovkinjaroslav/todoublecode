@@ -2,10 +2,15 @@
 //
 
 #include <iostream>
+#include <string>
+#include "cinner.h"
 
+using namespace std;
 int main()
 {
-    std::cout << "Hello World!\n";
+    string a;
+    a = cin_all();
+    cout << a;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
