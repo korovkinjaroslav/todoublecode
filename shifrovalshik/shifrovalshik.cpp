@@ -12,9 +12,29 @@ int main()
 {
     SetConsoleOutputCP(1251);
     SetConsoleCP(1251);
-    string a;
-    a = cin_all();
-    cout << shifr_text(a);\
+    string deystvie, text;
+    int key;
+    while (true) {
+        cout << "Что вы хотите сделать с текстом? (напишите расшифровать или зашифровать)\n";
+        cin >> deystvie;
+        if (deystvie == "расшифровать") {
+            cout << "Введите ключ шифра\n";
+            cin >> key;
+            cout << "Введите зашифрованный текст" << endl;
+            cin >> text;
+            cout << rasshifr_text(text, key) << endl;
+        }
+        else if (deystvie == "зашифровать") {
+            cout << "Введите ключ шифра\n";
+            cin >> key;
+            cout << "Введите текст" << endl;
+            text = cin_all();
+            cout << shifr_text(text, key) << endl;
+        }
+        else {
+            cout << "Команды <<" << deystvie << ">> не найдено \n";
+        }
+    }
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
