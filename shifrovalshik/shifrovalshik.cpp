@@ -4,13 +4,17 @@
 #include <iostream>
 #include <string>
 #include "cinner.h"
+#include "doublecode.h"
+#include <windows.h>;
 
 using namespace std;
 int main()
 {
+    SetConsoleOutputCP(1251);
+    SetConsoleCP(1251);
     string a;
     a = cin_all();
-    cout << a;
+    cout << shifr_text(a);\
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
